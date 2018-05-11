@@ -1,0 +1,20 @@
+前期准备
+-域名
+-服务器
+-Docker环境
+
+修改文件（改成自己的域名）
+-Dockerfile	DNS_URL
+-ngrok.cfg	server_addr
+
+将文件上传至服务器
+-Dockerfile
+-start.sh
+
+执行命令
+
+docker build -t centos/ngrok .
+docker run -i -t -p 4443:4443 -p 443:443 -p 80:80 -v ~/softwear/centos:/home/softwear imageID /bin/bash
+
+拷贝/softwear/centos目录下的文件到ngrok目录
+运行start.bat
